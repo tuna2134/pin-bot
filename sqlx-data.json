@@ -1,0 +1,53 @@
+{
+  "db": "SQLite",
+  "8e0b0f404a76bc56482c0a80bf8f19a1a57f6691b0dfa93a1b17cfbdcfa368bb": {
+    "describe": {
+      "columns": [],
+      "nullable": [],
+      "parameters": {
+        "Right": 3
+      }
+    },
+    "query": "INSERT INTO Message VALUES($1, $2, $3)"
+  },
+  "9ae85662f07d52af70c6a71a8edde44e7cbf87322c151616a7fa11a64b08b85c": {
+    "describe": {
+      "columns": [
+        {
+          "name": "ChannelId",
+          "ordinal": 0,
+          "type_info": "Int64"
+        },
+        {
+          "name": "MessageContent",
+          "ordinal": 1,
+          "type_info": "Int64"
+        },
+        {
+          "name": "AuthorId",
+          "ordinal": 2,
+          "type_info": "Int64"
+        }
+      ],
+      "nullable": [
+        true,
+        true,
+        true
+      ],
+      "parameters": {
+        "Right": 1
+      }
+    },
+    "query": "SELECT * FROM Message WHERE ChannelId = $1"
+  },
+  "e9927839c3654f06015ae526b130791385ef0cf021af60327813716f9ceff8aa": {
+    "describe": {
+      "columns": [],
+      "nullable": [],
+      "parameters": {
+        "Right": 1
+      }
+    },
+    "query": "DELETE FROM Message WHERE ChannelId = $1"
+  }
+}
